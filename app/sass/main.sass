@@ -1,0 +1,105 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	background-color: $background
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.center-icon-container
+	position: relative
+	.vertical-line
+		height: 200px
+		width: 5px
+		background-color: $icons
+		position: absolute
+		margin-left: 47.5px
+		z-index: -1
+	.round-bg
+		margin: 50px 0 50px 0
+		width: 100px
+		height: 100px
+		border-radius: 50px
+		background-color: rgba(255, 255, 255, 0.0)
+		background-blend-mode: screen
+		z-index: 9999
+		position: relative
+		&:hover
+			background-color: rgba(255, 255, 255, 0.3)
+		.plate
+			position: absolute
+			margin: 7px 0 0 7px
+			width: 86px
+			height: 86px
+			background-color: darken(#eff0f2, 6)
+			border: 2px solid darken(#eff0f2, 3)
+			border-radius: 43px
+			box-shadow: 0px 0px 10px 0px #888888
+			&:hover
+				box-shadow: 0px 0px 30px 0px #888888
+				width: 88px
+				height: 88px
+				border-radius: 44px
+				margin: 6px 0 0 6px
+			i
+				margin: 16px 0 0 17px
+				color: $icons
+				&:hover
+					color: darken($icons, 5)
+
+.stiker-container
+	position: relative
+	margin: 50px 0 0 0
+	.stiker-arrow
+		margin-top: 35px
+		position: absolute
+		height: 30px
+		width: 30px
+		transform: rotate(45deg)
+		background-color: #eff0f2
+	.stiker
+		margin-left: 15px
+		position: absolute
+		height: 100px
+		width: 240px
+		background-color: #eff0f2
+		border-right: 15px solid lighten(#f8bb6b, 15)
+		border-radius: 3px
+	
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+
+@import "media" // Always at the end
