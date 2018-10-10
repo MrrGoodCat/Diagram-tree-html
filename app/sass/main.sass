@@ -10,6 +10,8 @@
 	color: #fff
 
 body
+	display: flex
+	justify-content: center
 	font-size: 16px
 	background-color: $background
 	min-width: 320px
@@ -26,78 +28,155 @@ body
 		&:required:valid
 			border-color: green
 
-.center-icon-container
-	position: relative
+
+.main-cont
 	display: flex
 	justify-content: center
-	.vertical-line
-		height: 200px
-		width: 5px
-		background-color: $icons
-		position: absolute
-		z-index: -1
-	.round-bg
-		margin: 50px 0 50px 0
-		width: 100px
-		height: 100px
-		border-radius: 50px
-		background-color: rgba(255, 255, 255, 0.0)
-		background-blend-mode: screen
-		position: relative
-		&:hover
-			background-color: rgba(255, 255, 255, 0.3)
-		.plate
-			position: absolute
-			margin: 7px 0 0 7px
-			width: 86px
-			height: 86px
-			background-color: darken(#eff0f2, 6)
-			border: 2px solid darken(#eff0f2, 3)
-			border-radius: 43px
-			box-shadow: 0px 0px 10px 0px #888888
-			&:hover
-				box-shadow: 0px 0px 30px 0px #888888
-				width: 88px
-				height: 88px
-				border-radius: 44px
-				margin: 6px 0 0 6px
-			i
-				margin: 16px 0 0 17px
-				color: $icons
-				&:hover
-					color: darken($icons, 5)
-
-.stiker-container
+	//border: 5px solid red
+	width: 60%
+	height: 600px
 	position: relative
-	margin: 50px 0 0 0
-	.stiker-arrow
-		margin-top: 35px
-		position: absolute
-		height: 30px
-		width: 30px
-		transform: rotate(45deg)
-		background-color: #eff0f2
-	.stiker
-		margin-left: 15px
-		position: absolute
-		height: 100px
-		width: 240px
-		background-color: #eff0f2
-		border-right: 15px solid lighten(#f8bb6b, 15)
-		border-radius: 3px
+
+.separator
+	height: 100%
+	width: 5px
+	background-color: $icons
+
+.content-container
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	position: absolute
+	//border: 5px solid blue
+	width: 100%
+	height: 100%
+	.row-container
+		display: flex
+		//flex-direction: row-reverse
+		justify-content: space-evenly
+		&:nth-child(2n)
+			flex-direction: row-reverse
+		.col-one
+			height: 100px
+			width: 300px
+			border: 5px solid #5f7a31
+		.col-two
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			align-content: center
+			height: 100px
+			width: 100px
+			//border: 5px solid crimson
+			.round-bg
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-content: center
+				width: 100px
+				height: 100px
+				border-radius: 50px
+				background-color: rgba(255, 255, 255, 0.0)
+				position: relative
+				&:hover
+					background-color: rgba(255, 255, 255, 0.3)
+				.plate
+					position: absolute
+					margin-top: 6px
+					width: 86px
+					height: 86px
+					background-color: darken(#eff0f2, 6)
+					border: 2px solid darken(#eff0f2, 3)
+					border-radius: 43px
+					box-shadow: 0px 0px 10px 0px #888888
+					&:hover
+						box-shadow: 0px 0px 30px 0px #888888
+						width: 88px
+						height: 88px
+						border-radius: 44px
+						//margin: 6px 0 0 6px
+					i
+						margin: 16px 0 0 17px
+						color: $icons
+						&:hover
+							color: darken($icons, 5)
+		.col-three
+			height: 100px
+			width: 300px
+			border: 5px solid crimson
+
+// .center-icon-container
+// 	position: relative
+// 	display: flex
+// 	justify-content: center
+// 	.vertical-line
+// 		height: 200px
+// 		width: 5px
+// 		background-color: $icons
+// 		position: absolute
+// 		z-index: -1
+	// .round-bg
+	// 	margin: 50px 0 50px 0
+	// 	width: 100px
+	// 	height: 100px
+	// 	border-radius: 50px
+	// 	background-color: rgba(255, 255, 255, 0.0)
+	// 	background-blend-mode: screen
+	// 	position: relative
+	// 	&:hover
+	// 		background-color: rgba(255, 255, 255, 0.3)
+	// 	.plate
+	// 		position: absolute
+	// 		margin: 7px 0 0 7px
+	// 		width: 86px
+	// 		height: 86px
+	// 		background-color: darken(#eff0f2, 6)
+	// 		border: 2px solid darken(#eff0f2, 3)
+	// 		border-radius: 43px
+	// 		box-shadow: 0px 0px 10px 0px #888888
+	// 		&:hover
+	// 			box-shadow: 0px 0px 30px 0px #888888
+	// 			width: 88px
+	// 			height: 88px
+	// 			border-radius: 44px
+	// 			margin: 6px 0 0 6px
+	// 		i
+	// 			margin: 16px 0 0 17px
+	// 			color: $icons
+	// 			&:hover
+	// 				color: darken($icons, 5)
+
+// .stiker-container
+// 	position: relative
+// 	margin: 50px 0 0 0
+// 	.stiker-arrow
+// 		margin-top: 35px
+// 		position: absolute
+// 		height: 30px
+// 		width: 30px
+// 		transform: rotate(45deg)
+// 		background-color: #eff0f2
+// 	.stiker
+// 		margin-left: 15px
+// 		position: absolute
+// 		height: 100px
+// 		width: 240px
+// 		background-color: #eff0f2
+// 		border-right: 15px solid lighten(#f8bb6b, 15)
+// 		border-radius: 3px
 	
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-	&.img-width
-		width: 100%
+// .img-responsive
+// 	display: block
+// 	max-width: 100%
+// 	height: auto
+// 	&.img-width
+// 		width: 100%
 
-.text-center
-	text-align: center
+// .text-center
+// 	text-align: center
 
-b, strong
+// b, strong
 	font-weight: bold
 
 
