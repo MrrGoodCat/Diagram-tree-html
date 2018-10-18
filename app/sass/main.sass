@@ -47,37 +47,62 @@ body
 	flex-direction: column
 	justify-content: space-around
 	position: absolute
-	border: 5px solid blue
+	//border: 5px solid blue
 	width: 100%
 	height: 100%
 	.row-container
 		display: flex
-		//flex-direction: row-reverse
+		flex-direction: row-reverse
 		justify-content: space-evenly
+		.clock-container
+			display: flex
+			align-items: flex-start
+			justify-content: center
+			width: 200px
+			height: 200px
+			//border: 1px solid blue
+			img
+				width: 160px
+				height: 160px
+				border-radius: 80px
+				box-shadow: 0px 0px 10px 0px #888888
 		&:nth-child(2n)
-			flex-direction: row-reverse
+			flex-direction: row
 			.col-one
-				flex-direction: row-reverse
+				flex-direction: row
 			.col-three
-				flex-direction: row-reverse
+				flex-direction: row
 				.rectangle
 					width: 0
 					height: 0
 					border-style: solid
-					border-width: 17px 0 17px 25px
-					border-color: transparent transparent transparent #f1f1f1
+					border-width: 17px 25px 17px 0
+					border-color: transparent #f1f1f1 transparent transparent
 				.info-container
 					height: 120px
 					width: 250px
 					background-color: #f1f1f1
-					border-radius: 0 5px 5px 0
+					border-radius: 5px 0 0 5px
 				.colored-mark
 					height: 120px
 					width: 50px
 					background-color: #ead5ad
-					border-radius: 5px 0 0 5px
+					border-radius: 0 5px 5px 0
+		&:nth-child(2)
+			.col-three
+				.colored-mark
+					background-color: #ead5ad
+		&:nth-child(4)
+			.col-three
+				.colored-mark
+					background-color: #f1b65b
+		&:nth-child(3)
+			.col-three
+				.colored-mark
+					background-color: #aaca77
 		.col-one
 			display: flex
+			flex-direction: row-reverse
 			justify-content: flex-end
 			align-items: center
 			height: 150px
@@ -111,6 +136,17 @@ body
 			align-items: center
 			height: 150px
 			width: 120px
+			.angle
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 60px
+				width: 60px
+				background-color: darken(#eff0f2, 6)
+				border-radius: 30px
+				box-shadow: 0px 0px 10px 0px #888888
+				i
+					color: $icons
 			//border: 5px solid crimson
 			.round-bg
 				display: flex
@@ -150,25 +186,67 @@ body
 			width: 400px
 			//border: 5px solid crimson
 			display: flex
-			flex-direction: row
+			flex-direction: row-reverse
 			justify-content: flex-start
 			align-items: center
 			.rectangle
 				width: 0
 				height: 0
 				border-style: solid
-				border-width: 17px 25px 17px 0
-				border-color: transparent #f1f1f1 transparent transparent
+				border-width: 17px 0 17px 25px
+				border-color: transparent transparent transparent #f1f1f1				
 			.info-container
+				display: flex
+				justify-content: center
+				align-items: center
 				height: 120px
 				width: 250px
 				background-color: #f1f1f1
-				border-radius: 5px 0 0 5px
+				border-radius: 0 5px 5px 0
+				.step-block
+					display: flex
+					flex-direction: column
+					justify-content: flex-end
+					align-items: center
+					//border: 1px solid crimson
+					padding-left: 10px
+					height: 100%
+					h3
+						text-transform: uppercase
+						//border: 1px solid crimson
+						font-size: 22px
+						margin-bottom: -20px
+						color: #999999
+					h2
+						font-size: 50px
+						color: #9c9c9c
+						//font-family: serif
+						//border: 1px solid crimson
+				.info-block
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: flex-start
+					padding: 10px
+					height: 100%
+					//border: 1px solid crimson
+					h4
+						text-transform: uppercase
+						//border: 1px solid crimson
+						font-size: 18px
+						margin-bottom: -8px
+						color: #515151
+					p
+						display: block
+						//border: 1px solid crimson
+						height: 50px
+						font-size: 9px
+						padding-top: 5px
 			.colored-mark
 				height: 120px
 				width: 50px
-				background-color: #ead5ad
-				border-radius: 0 5px 5px 0
+				background-color: #83b59f
+				border-radius: 5px 0 0 5px
 
 
 // .center-icon-container
