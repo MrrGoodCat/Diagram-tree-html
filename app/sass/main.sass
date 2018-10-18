@@ -58,6 +58,24 @@ body
 			flex-direction: row-reverse
 			.col-one
 				flex-direction: row-reverse
+			.col-three
+				flex-direction: row-reverse
+				.rectangle
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 17px 0 17px 25px
+					border-color: transparent transparent transparent #f1f1f1
+				.info-container
+					height: 120px
+					width: 250px
+					background-color: #f1f1f1
+					border-radius: 0 5px 5px 0
+				.colored-mark
+					height: 120px
+					width: 50px
+					background-color: #ead5ad
+					border-radius: 5px 0 0 5px
 		.col-one
 			display: flex
 			justify-content: flex-end
@@ -130,7 +148,28 @@ body
 		.col-three
 			height: 150px
 			width: 400px
-			border: 5px solid crimson
+			//border: 5px solid crimson
+			display: flex
+			flex-direction: row
+			justify-content: flex-start
+			align-items: center
+			.rectangle
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 17px 25px 17px 0
+				border-color: transparent #f1f1f1 transparent transparent
+			.info-container
+				height: 120px
+				width: 250px
+				background-color: #f1f1f1
+				border-radius: 5px 0 0 5px
+			.colored-mark
+				height: 120px
+				width: 50px
+				background-color: #ead5ad
+				border-radius: 0 5px 5px 0
+
 
 // .center-icon-container
 // 	position: relative
